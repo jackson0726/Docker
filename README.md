@@ -1,5 +1,7 @@
 # Docker
 
+[Link Doc](https://docs.google.com/document/d/18tihkl7GzamOj-8jhmwmeOOlW9scqrUY-hFZql2VB2U)
+
 ## Build the container image
 
 docker build -t image_name:version <path> <br/>
