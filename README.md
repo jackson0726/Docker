@@ -1,6 +1,6 @@
 # Docker
 
-[Link Doc]([https://docs.google.com/document/d/18tihkl7GzamOj-8jhmwmeOOlW9scqrUY-hFZql2VB2U](https://docs.google.com/document/d/18tihkl7GzamOj-8jhmwmeOOlW9scqrUY-hFZql2VB2U/edit?usp=sharing))
+[Link Doc](https://docs.google.com/document/d/18tihkl7GzamOj-8jhmwmeOOlW9scqrUY-hFZql2VB2U/edit?usp=sharing)
 
 ## Build the container image
 
