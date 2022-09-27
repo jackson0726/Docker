@@ -79,9 +79,9 @@ ps aux
 
 ## Limiting a container's use of the CPU
 
-docker run --cpuset-cpus="1,2" ...
-docker run ---cpus="0.5" ...
-docker run --memory="100m" ...
+docker run --cpuset-cpus="1,2" ...  <br/>
+docker run ---cpus="0.5" ... <br/>
+docker run --memory="100m" ... <br/>
 
 
 
