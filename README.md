@@ -2,6 +2,12 @@
 
 [Link Doc](https://docs.google.com/document/d/18tihkl7GzamOj-8jhmwmeOOlW9scqrUY-hFZql2VB2U/edit?usp=sharing)
 
+## Installing Docker
+
+[Link install](https://docs.docker.com/engine/install)
+sudo usermod -a -G docker [user]
+newgrp docker
+
 ## Build the container image
 
 docker build -t image_name:version <path> <br/>
