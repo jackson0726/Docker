@@ -1,7 +1,7 @@
 # Docker
 
 ### Build the container image
-docker build -t <image_name>:<version> <path>
+docker build -t <image_name>:<version> <path> <br/>
 ex: docker build -t kubia:latest .
 
 ### Listing images
