@@ -68,3 +68,22 @@ ex: docker rm kubia-container
   
 docker rmi image_name:version <br/>
 ex: docker rmi kubia:latest
+
+## Running a Shell inside an existing container
+
+docker exec -it container_name bash
+
+## Listing processes running in the container
+
+ps aux
+
+## Limiting a container's use of the CPU
+
+docker run --cpuset-cpus="1,2" ...
+docker run ---cpus="0.5" ...
+docker run --memory="100m" ...
+
+
+
+
+
