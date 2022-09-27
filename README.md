@@ -90,6 +90,14 @@ docker run ---cpus="0.5" ... <br/>
 docker run --memory="100m" ... <br/>
 
 
+## VS Code
 
+curl -sSL https://packages.microsoft.com/keys/microsoft.asc -o microsoft.asc <br/>
+gpg --no-default-keyring --keyring ./ms_vscode_key_temp.gpg --import ./microsoft.asc <br/>
+gpg --no-default-keyring --keyring ./ms_vscode_key_temp.gpg --export > ./ms_vscode_key.gpg <br/>
+sudo mv ms_vscode_key.gpg /etc/apt/trusted.gpg.d/ <br/>
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list  <br/>
+sudo apt update <br/>
+sudo apt install code <br/>
 
 
