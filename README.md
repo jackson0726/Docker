@@ -4,7 +4,7 @@
 
 ## Installing Docker
 
-[Link install](https://docs.docker.com/engine/install)
+[Link install](https://docs.docker.com/engine/install/debian/)
 
 ```
 sudo apt-get update 
