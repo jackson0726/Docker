@@ -7,36 +7,36 @@
 [Link install](https://docs.docker.com/engine/install)
 
 ```
-sudo apt-get update <br/>
+sudo apt-get update 
 
 sudo apt-get install \
     ca-certificates \
     curl \
     gnupg \
-    lsb-release <br/>
+    lsb-release 
 
-sudo mkdir -p /etc/apt/keyrings <br/>
+sudo mkdir -p /etc/apt/keyrings 
 
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg <br/>
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg 
 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
- <br/>
+ 
 
-sudo apt-get update <br/>
+sudo apt-get update 
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin <br/>
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin 
 
-sudo docker run hello-world <br/>
+sudo docker run hello-world 
 
-sudo usermod -a -G docker [user] && newgrp docker <br/>
+sudo usermod -a -G docker [user] && newgrp docker 
 ```
 
 ## Build the container image
 
 ```
-docker build -t image_name:version <path> <br/>
+docker build -t image_name:version <path> 
 ex: docker build -t kubia:latest .
 ```
 
@@ -49,14 +49,14 @@ docker images
 ## Displaying the layers of a container image
   
 ```
-docker history image_name:version <br/>
+docker history image_name:version 
 ex: docker history kubia:latest
 ```
 
 ## Running the container image
   
 ```
-docker run --name container_name -p mapping_port:container_port -d image_name <br/>
+docker run --name container_name -p mapping_port:container_port -d image_name 
 ex: docker run --name kubia-container -p 1234:8080 -d kubia
 ```
 
@@ -69,21 +69,21 @@ docker ps
 ## Getting additional information about a container
   
 ```
-docker inspect container_name <br/>
+docker inspect container_name 
 ex: docker inspect kubia-container
 ```
 
 ## Displaying the container's log
   
 ```
-docker logs container_name <br/>
+docker logs container_name 
 ex: docker logs kubia-container
 ```
 
 ## Tagging an image under an additional tag
   
 ```
-docker tag image_name docker_hub_id/image_name:version <br/>
+docker tag image_name docker_hub_id/image_name:version 
 ex: docker tag kubia luksa/kubia:1.0
 ```
 
@@ -96,35 +96,35 @@ docker images | head
 ## Pushing the image to Docker Hub
   
 ```
-docker login -u docker_hub_id -p password hub_url <br/>
+docker login -u docker_hub_id -p password hub_url 
 docker push docker_hub_id/image_name:version
 ```
 
 ## Running the image on other hosts
   
 ```
-docker run -p mapping_port:container_port -d docker_hub_id/image_name:version <br/>
+docker run -p mapping_port:container_port -d docker_hub_id/image_name:version 
 ex: docker run -p 1234:8080 -d luksa/kubia:1.0
 ```
 
 ## Stopping a container
   
 ```
-docker stop container_name <br/>
+docker stop container_name 
 ex: docker stop kubia-container
 ```
 
 ## Deleting a container
   
 ```
-docker rm container_name <br/>
+docker rm container_name 
 ex: docker rm kubia-container
 ```
 
 ## Deleting an image
   
 ```
-docker rmi image_name:version <br/>
+docker rmi image_name:version 
 ex: docker rmi kubia:latest
 ```
 
@@ -143,22 +143,22 @@ ps aux
 ## Limiting a container's use of the CPU
 
 ```
-docker run --cpuset-cpus="1,2" ...  <br/>
-docker run ---cpus="0.5" ... <br/>
-docker run --memory="100m" ... <br/>
+docker run --cpuset-cpus="1,2" ...  
+docker run ---cpus="0.5" ... 
+docker run --memory="100m" ... 
 ```
 
 
 ## VS Code
 
 ```
-curl -sSL https://packages.microsoft.com/keys/microsoft.asc -o microsoft.asc <br/>
-gpg --no-default-keyring --keyring ./ms_vscode_key_temp.gpg --import ./microsoft.asc <br/>
-gpg --no-default-keyring --keyring ./ms_vscode_key_temp.gpg --export > ./ms_vscode_key.gpg <br/>
-sudo mv ms_vscode_key.gpg /etc/apt/trusted.gpg.d/ <br/>
-echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list  <br/>
-sudo apt update <br/>
-sudo apt install code <br/>
+curl -sSL https://packages.microsoft.com/keys/microsoft.asc -o microsoft.asc 
+gpg --no-default-keyring --keyring ./ms_vscode_key_temp.gpg --import ./microsoft.asc 
+gpg --no-default-keyring --keyring ./ms_vscode_key_temp.gpg --export > ./ms_vscode_key.gpg 
+sudo mv ms_vscode_key.gpg /etc/apt/trusted.gpg.d/ 
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list  
+sudo apt update 
+sudo apt install code 
 ```
 
 
